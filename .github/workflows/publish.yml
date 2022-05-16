@@ -1,13 +1,13 @@
 name: Publish package to package registry
 
 on: 
-  release
+  release:
     types: [created]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-      steps:
+    steps:
         - uses: actions/checkout@v2
         - name: npm install and build webpack
           run: |
